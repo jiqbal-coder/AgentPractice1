@@ -12,5 +12,5 @@ langgraph
 
 langchain_openai
 
-#graphviz
-#pygraphviz
+graphviz
+pygraphviz

@@ -47,7 +47,7 @@ def start_chat():
             st.markdown(prompt)
         abot=salesCompAgent(st.secrets['OPENAI_API_KEY'])
         thread={"configurable":{"thread_id":thread_id}}
-        for s in abot.graph.stream({'initialMsg':prompt},thread):
+        for s in abot.graph.stream({'initialMessage':prompt},thread):
             if DEBUGGING:
                 print(f"GRAPH RUN: {s}")
                 st.write(s)
