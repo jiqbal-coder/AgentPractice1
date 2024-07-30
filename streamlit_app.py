@@ -11,7 +11,7 @@ os.environ["LANGSMITH_API_KEY"]=st.secrets['LANGCHAIN_API_KEY']
 DEBUGGING=0
 
 def start_chat():
-    st.title('Test Zoom Conflict Handler')
+    st.title('Sales Comp Customer Support Agent')
     avatars={"system":"💻🧠","user":"🧑‍💼","assistant":"🎓"}
 
     if "messages" not in st.session_state:
@@ -25,14 +25,6 @@ def start_chat():
         st.session_state.thread_id = random.randint(1000, 9999)
     thread_id = st.session_state.thread_id
 
-    # Reminder
-    st.sidebar.write("""
-    Use cases:
-    1. Student didnt join.
-    2. Teacher cannot join session.
-    3. Teacher needs to cancel existing session.
-    4. ...
-                      """)
 
 
     for message in st.session_state.messages:
